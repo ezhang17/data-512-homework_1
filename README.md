@@ -9,12 +9,43 @@ The project also uses [this CSV file](https://drive.google.com/file/d/15_FiKhBgX
 
 ### Output Files
 The Jupyter Notebook outputs 3 data files (in JSON format) with a schema of article:time-series data. Article names are used as a key to a list of time-series data (in dictionary format). Each of these dictionaries contains a key-value pair for project, article, granularity, timestamp, agent, and views. Project, article, granularity, timestamp, and agent are of string types, and views is an integer. The timestamps are in YYYYMMDDHH format.
-Each of these files follows the naming format rare-disease_monthly_accesstype_startdate-enddate.json. 
+
+Schema:
+| Column    | Data Type |
+| -------- | ------- |
+| Article Name | key (string) | 
+| Time-series Data | item (list of dictionaries) |
+
+Sample Data:
+{"Klinefelter syndrome": [
+            {
+                "project": "en.wikipedia",
+                "article": "Klinefelter_syndrome",
+                "granularity": "monthly",
+                "timestamp": "2015070100",
+                "agent": "user",
+                "views": 75311
+            },
+            {
+                "project": "en.wikipedia",
+                "article": "Klinefelter_syndrome",
+                "granularity": "monthly",
+                "timestamp": "2015080100",
+                "agent": "user",
+                "views": 68083
+            }, ... ]}
+
+File names:
+rare-disease_monthly_cumulative_201507-202409.json
+rare-disease_monthly_desktop_201507-202409.json
+rare-disease_monthly_mobile_201507-202409.json
 
 This project also outputs 3 graphs: Maximum Average and Minimum Average, Top 10 Peak Page Views, and Fewest Months of Data.
 The Maximum Average and Minimum Average graph displays the view trends for the articles with the most and least average overall page views for each access type.
 The Top 10 Peak Page Views graph displays the view trends for the top 10 articles with the most views at any given month for each access type.
 The Fewest Months of Data graph displays the view trends for the 10 articles with the least amount of data for each access type, where least amount of data is defined by having the fewest months of data.
 
+### Data Considerations
+Though the intended range of data is from July 2015 through September 2024, there are articles with an incomplete set of data (we plot the most sparse 10 for each access type in the analysis).
 
 
