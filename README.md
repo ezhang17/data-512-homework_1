@@ -7,6 +7,8 @@ The source data is licensed under [CC BY-SA 4.0](https://creativecommons.org/lic
 This project retrieves page view data from the Wikimedia API, [API reference here](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/).
 The project also uses [this CSV file](https://drive.google.com/file/d/15_FiKhBgXB2Ch9c0gAGYzKjF0DBhEPlY/view?usp=sharing) as an initial list of rare diseases to retrieve data for. This list references the database of rare diseases collected by [NORD](https://rarediseases.org).
 
+Code used to make API calls is adapted from [code example](https://drive.google.com/file/d/1fYTIX79t9jk-Jske8IwysV-rbRkD4_dc/view?usp=drive_link) developed by Dr. David W. McDonald for use in DATA 512, a course in the UW MS Data Science degree program. This code is provided under the [Creative Commons](https://creativecommons.org) [CC-BY license](https://creativecommons.org/licenses/by/4.0/). Revision 1.3 - August 16, 2024
+
 ### Output Files
 The Jupyter Notebook outputs 3 data files (in JSON format) with a schema of article:time-series data. Article names are used as a key to a list of time-series data (in dictionary format). Each of these dictionaries contains a key-value pair for project, article, granularity, timestamp, agent, and views. Project, article, granularity, timestamp, and agent are of string types, and views is an integer. The timestamps are in YYYYMMDDHH format.
 
