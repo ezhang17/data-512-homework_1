@@ -36,11 +36,14 @@ Sample Data:
             }, ... ]}
 
 File names:
-rare-disease_monthly_cumulative_201507-202409.json
-rare-disease_monthly_desktop_201507-202409.json
-rare-disease_monthly_mobile_201507-202409.json
+| File Name   | Description |
+| -------- | ------- |
+| rare-disease_monthly_cumulative_201507-202409.json | Cumulative page view data from July 2015 through September 2024. Cumulative is defined as mobile + desktop access. |
+| rare-disease_monthly_desktop_201507-202409.json | Desktop access page view data from July 2015 through September 2024. |
+| rare-disease_monthly_mobile_201507-202409.json | Mobile access page view data from July 2015 through September 2024. Includes both mobile-app and mobile-web access types. |
 
 This project also outputs 3 graphs: Maximum Average and Minimum Average, Top 10 Peak Page Views, and Fewest Months of Data.
+
 The Maximum Average and Minimum Average graph displays the view trends for the articles with the most and least average overall page views for each access type.
 The Top 10 Peak Page Views graph displays the view trends for the top 10 articles with the most views at any given month for each access type.
 The Fewest Months of Data graph displays the view trends for the 10 articles with the least amount of data for each access type, where least amount of data is defined by having the fewest months of data.
